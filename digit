@@ -1,0 +1,120 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(12,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(10,OUTPUT);
+  pinMode(9,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(6,OUTPUT);
+//a9,b12,c11,d10,e8,f6,g7
+}
+void digit1(){
+  digitalWrite(12,1);
+  digitalWrite(11,1);
+  digitalWrite(10,0);
+  digitalWrite(9,0);
+  digitalWrite(8,0);
+  digitalWrite(7,0);
+  digitalWrite(6,0);
+}
+
+void digit2(){
+  digitalWrite(9,1);
+  digitalWrite(12,1);
+  digitalWrite(7,1);
+  digitalWrite(8,1);
+  digitalWrite(10,1);
+  digitalWrite(11,0);
+  digitalWrite(6,0);
+}
+
+void digit3(){
+  digitalWrite(9,1);
+  digitalWrite(12,1);
+  digitalWrite(11,1);
+  digitalWrite(7,1);
+  digitalWrite(10,1);
+  digitalWrite(8,0);
+  digitalWrite(6,0);
+}
+
+void digit4(){
+  digitalWrite(12,1);
+  digitalWrite(11,1);
+  digitalWrite(6,1);
+  digitalWrite(7,1);
+  digitalWrite(10,0);
+  digitalWrite(9,0);
+  digitalWrite(8,0);
+}
+
+void digit5(){
+  digitalWrite(12,0);
+  digitalWrite(11,1);
+  digitalWrite(6,1);
+  digitalWrite(7,1);
+  digitalWrite(10,1);
+  digitalWrite(9,1);
+  digitalWrite(8,0);
+}
+
+void digit6(){
+  digitalWrite(12,0);
+  digitalWrite(11,1);
+  digitalWrite(6,1);
+  digitalWrite(7,1);
+  digitalWrite(10,1);
+  digitalWrite(9,1);
+  digitalWrite(8,1);
+}
+
+void digit7(){
+  digitalWrite(12,1);
+  digitalWrite(11,1);
+  digitalWrite(6,0);
+  digitalWrite(7,0);
+  digitalWrite(10,0);
+  digitalWrite(9,1);
+  digitalWrite(8,0);
+}
+
+void digit8(){
+  digitalWrite(12,1);
+  digitalWrite(11,1);
+  digitalWrite(6,1);
+  digitalWrite(7,1);
+  digitalWrite(10,1);
+  digitalWrite(9,1);
+  digitalWrite(8,1);
+}
+
+void digit9(){
+  digitalWrite(12,1);
+  digitalWrite(11,1);
+  digitalWrite(6,1);
+  digitalWrite(7,1);
+  digitalWrite(10,1);
+  digitalWrite(9,1);
+  digitalWrite(8,0);
+}
+byte broski = 0;
+void loop()
+{
+  byte konfeta = 1 + random(9);
+  if (konfeta == 1){digit1();}
+  if (konfeta == 2){digit2();}
+  if (konfeta == 3){digit3();}
+  if (konfeta == 4){digit4();}
+  if (konfeta == 5){digit5();}
+  if (konfeta == 6){digit6();}
+  if (konfeta == 7){digit7();}
+  if (konfeta == 8){digit8();}
+  if (konfeta == 9){digit9();}
+  delay(300);
+  broski = broski+1;
+  if (broski>100){
+    delay(100000);}
+}
